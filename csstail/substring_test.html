@@ -1,0 +1,30 @@
+<html>
+  <head>
+  </head>
+  <body>
+   <label>Enter a Sentence: </label> <input type="text" placeholder="Type " id="Sentence"></br> 
+   <label>Enter a Letter: </label> <input type="text" placeholder="Type " id="Letter"> </br> </br>
+   <button type="button" onclick="getInputValue();">Submit</button></br>
+   <input type="text" placeholder="Result " id="Result" readonly> 
+   
+    <script>
+      function getInputValue() {
+        let SentenceValue = document.getElementById("Sentence").value;
+        let LetterValue = document.getElementById("Letter").value;
+        var exist = SentenceValue.includes(LetterValue);
+        if(exist == true)
+        {
+        var indexvalue = SentenceValue.indexOf(LetterValue);
+        var result = SentenceValue.substring(indexvalue+1);
+        document.getElementById("Result").value = result; 
+        }
+    else
+    {
+        document.getElementById("Result").value = "The letter does not exist in the sentence"; 
+    }
+      }
+    </script>
+
+
+  </body>
+</html>

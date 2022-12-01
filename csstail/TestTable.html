@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+    <script type="text/javascript">
+      function addRows() {
+        var table = document.getElementById("emptbl");
+        var rowCount = table.rows.length;
+        var cellCount = table.rows[0].cells.length;
+        var row = table.insertRow(rowCount);
+        for (var i = 0; i < cellCount; i++) {
+          var cell = "cell" + i;
+          cell = row.insertCell(i);
+          var copycel = document.getElementById("01").innerHTML;
+          cell.innerHTML = copycel;
+        }
+      }
+      function topRows() {
+        var table = document.getElementById("emptbl");
+        var rowCount = table.rows.length;
+        var cellCount = table.rows[0].cells.length;
+        var row = table.insertRow(1);
+        for (var i = 0; i < cellCount; i++) {
+          var cell = "cell" + i;
+          cell = row.insertCell(i);
+          var copycel = document.getElementById("01").innerHTML;
+          cell.innerHTML = copycel;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <form action="#" method="post">     -->
+    <table id="emptbl">
+      <tr>
+        <th>SL.NO</th>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>CITY</th>
+        <th>COUNTRY</th>
+      </tr>
+      <tr>
+        <td><input type="text" value="01" /></td>
+        <td><input type="text" value="Raj" /></td>
+        <td><input type="text" value="Kumar" /></td>
+        <td><input type="text" value="hydrabad" /></td>
+        <td><input type="text" value="india" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" value="02" /></td>
+        <td><input type="text" value="Raj" /></td>
+        <td><input type="text" value="Kumar" /></td>
+        <td><input type="text" value="hydrabad" /></td>
+        <td><input type="text" value="india" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" value="01" /></td>
+        <td><input type="text" value="Raj" /></td>
+        <td><input type="text" value="Kumar" /></td>
+        <td><input type="text" value="hydrabad" /></td>
+        <td><input type="text" value="india" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" value="01" /></td>
+        <td><input type="text" value="Raj" /></td>
+        <td><input type="text" value="Kumar" /></td>
+        <td><input type="text" value="hydrabad" /></td>
+        <td><input type="text" value="india" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" value="01" /></td>
+        <td><input type="text" value="Raj" /></td>
+        <td><input type="text" value="Kumar" /></td>
+        <td><input type="text" value="hydrabad" /></td>
+        <td><input type="text" value="india" /></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <input type="button" value="Add Row to bottom" onclick="addRows()" />
+        </td>
+        <td>
+          <input type="button" value="Add Row to Top" onclick="topRows()" />
+        </td>
+
+        <td id="01" hidden="true"><input type="text" value="" /></td>
+      </tr>
+    </table>
+  </body>
+</html>
